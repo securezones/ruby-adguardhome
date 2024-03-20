@@ -84,7 +84,7 @@ module AdGuardHome
       #     name: '<string>'
       #   }
       def delete(attributes)
-        @agent.delete('/clients/delete', params: { body: attributes.to_json })
+        @agent.post('/clients/delete', params: { body: attributes.to_json })
       end
 
       ##
